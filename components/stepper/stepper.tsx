@@ -5,6 +5,8 @@ export interface StepperProps {
 	steps: Step[]
 }
 
+const TRUNCATE_LIMIT = 10;
+
 function truncate(str: string, max: number) {
 	return str.length > max ? str.slice(0, max) + "…" : str;
 }
@@ -26,7 +28,7 @@ export default function Stepper({ currentStep, steps }: StepperProps) {
 			</div>
 			<span title={step.title} className={`mt-2 truncate text-[12px] leading-[16px] sm:text-[16px] sm:leading-[24px] font-semibold justify-center items-center
                             ${index <= currentStep ? "text-gray-700" : "text-gray-500"}`}>
-				{truncate(step.title, 10)}
+				{truncate(step.title, TRUNCATE_LIMIT)}
 			</span>
 		</li>
 	}
