@@ -17,31 +17,4 @@ export const steps: Step[] = [
 	{
 		title: common.steps.contact.label
 	},
-	{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},{
-		title: common.steps.vehicle.label
-	},
 ];
