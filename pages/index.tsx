@@ -9,6 +9,9 @@ import useStepper from "../hooks/useStepper";
 
 export default function Home() {
 	const { currentStep, handleNextStep } = useStepper();
+
+	const isLast = steps.length - 1 === currentStep
+	const isNotEmpty = steps.length > 0
 	return (
 		<>
 			<Header />
@@ -17,7 +20,9 @@ export default function Home() {
 					<Stepper currentStep={currentStep} steps={steps} />
 				</StepperWrapper>
 				<ButtonWrapper>
-					<Button onClick={handleNextStep}>Next</Button>
+					{!isLast && isNotEmpty && (
+						<Button onClick={handleNextStep}>Next</Button>
+					)}
 				</ButtonWrapper>
 			</MainWrapper>
 		</>
